@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="OFF" monitorInterval="60">
+
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss,SSS}|+|%X{UUID}|+|%p|+|%t-%T|+|%c{1.}:%L|+|%M|+|%msg|%n</Property>
+        <Property name="MY_POD_NAME">local</Property>
+        <Property name="PROJECT_LOG_PATH">/mtAppLog/pblogs</Property>
+    </Properties>
+    <Appenders>
+        <!--控制台日志-->
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <Routing name="tranLogAppender">
+            <Routes pattern="${ctx:key}">
+                <Route key="$${ctx:key}">
+                    <RollingFile name="tranLogAppender-default"
+                                 createOnDemand="true"
+                                 immediateFlush="true"
+                                 append="true"
+                                 bufferedIO="true" bufferSize="8192"
+                                 fileName="${PROJECT_LOG_PATH}/${ctx:logType:-tran}/default/default-${sys:MY_POD_NAME}.log"
+                                 filePattern="${PROJECT_LOG_PATH}/${ctx:logType:-tran}/default/bak/$${date:yyyyMMdd}/default-${sys:MY_POD_NAME}-%d{yyyyMMdd}-%i.log.gz">
+                        <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+                        <PatternLayout charset="UTF-8" pattern="${LOG_PATTERN}"/>
+                        <Policies>
+                            <SizeBasedTriggeringPolicy size="200MB"/>
+                        </Policies>
+                        <DefaultRolloverStrategy max="100">
+                            <!--文件清理，3天清理-->
+                            <Delete basePath="${PROJECT_LOG_PATH}/tran/default" maxDepth="5">
+                                <IfLastModified age="1D"/>
+                            </Delete>
+                        </DefaultRolloverStrategy>
+                    </RollingFile>
+                </Route>
+                <Route>
+                    <RollingFile name="tranLogAppender-${ctx:key}"
+                                 createOnDemand="true"
+                                 immediateFlush="true"
+                                 append="true"
+                                 bufferedIO="true" bufferSize="8192"
+                                 fileName="${PROJECT_LOG_PATH}/${ctx:logType}/${ctx:chnlNo}/${ctx:tranCode}-${sys:MY_POD_NAME}.log"
+                                 filePattern="${PROJECT_LOG_PATH}/${ctx:logType}/bak/$${date:yyyyMMdd}/${ctx:chnlNo}/${ctx:tranCode}-${sys:MY_POD_NAME}-%d{yyyyMMdd}-%i.log.gz">
+                        <DynamicThresholdFilter key="POIN-PB-LEVEL"
+                                                defaultKey="INFO"
+                                                defaultThreshold="INFO"
+                                                onMatch="ACCEPT" onMismatch="DENY">
+                            <KeyValuePair key="TRACE" value="TRACE"/>
+                            <KeyValuePair key="DEBUG" value="DEBUG"/>
+                            <KeyValuePair key="INFO" value="INFO"/>
+                            <KeyValuePair key="ERROR" value="ERROR"/>
+                            <KeyValuePair key="OFF" value="OFF"/>
+                        </DynamicThresholdFilter>
+                        <PatternLayout charset="UTF-8" pattern="${LOG_PATTERN}"/>
+                        <Policies>
+                            <SizeBasedTriggeringPolicy size="200MB"/>
+                        </Policies>
+                        <DefaultRolloverStrategy max="2000">
+                            <!--文件清理，3天清理-->
+                            <Delete basePath="${PROJECT_LOG_PATH}" maxDepth="5">
+                                <IfLastModified age="3D"/>
+                            </Delete>
+                        </DefaultRolloverStrategy>
+                    </RollingFile>
+                </Route>
+            </Routes>
+        </Routing>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.apache.http" level="INFO" additivity="false">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="tranLogAppender"/>
+        </Logger>
+        <!--屏蔽Consul客户端相关DEBUG日志 -->
+        <Logger name="com.ecwid.consul" level="INFO" additivity="false">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="tranLogAppender"/>
+        </Logger>
+        <!--屏蔽jasypt相关重复的DEBUG日志 -->
+        <Logger name="com.ulisesbocchio.jasyptspringboot" level="INFO" additivity="false">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="tranLogAppender"/>
+        </Logger>
+        <!--屏蔽Spring MVC/DispatcherServlet的DEBUG日志 -->
+        <Logger name="org.springframework.web" level="INFO" additivity="false">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="tranLogAppender"/>
+        </Logger>
+
+        <!--屏蔽Spring Actuator健康检查的DEBUG日志 -->
+        <Logger name="org.springframework.boot.actuate" level="INFO" additivity="false">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="tranLogAppender"/>
+        </Logger>
+
+        <!--屏蔽HikariCP连接池的DEBUG日志 -->
+        <Logger name="com.zaxxer.hikari" level="INFO" additivity="false">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="tranLogAppender"/>
+        </Logger>
+
+        <AsyncRoot level="DEBUG" includeLocation="false" additivity="false">
+            <AppenderRef ref="tranLogAppender"/>
+            <AppenderRef ref="CONSOLE"/>
+        </AsyncRoot>
+    </Loggers>
+</Configuration>

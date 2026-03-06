@@ -1,0 +1,78 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: mtgw
+  cloud:
+    gateway:
+      locator:
+        enabled: true
+      default-filters:
+        - RemoveRequestHeader=Origin
+      routes:
+        - id: omServiceTranV1
+          uri: http://15.5.92.166:8082
+          order: 8
+          predicates:
+            - Path=/webapi/execTran/**
+            - Weight=service-v1,100
+            - SvcDispatcher=false
+          filters:
+            - Auth=Cobps@123
+            - RewritePath=/webapi/execTran/(.*),/webapi/obps/execTran/v1/$1
+            - name: ReqBlock
+              args:
+                enable: false
+                expStr: "#ctx.get('data')?.get('dataHead')?.get('cobpsServiceCode') == 'og0503'"
+        - id: omServiceTranV2
+          uri: http://15.5.92.166:8082
+          order: 8
+          predicates:
+            - Path=/webapi/execTran/**
+            - Weight=service-v1,0
+            - name: SvcDispatcher
+              args:
+                dbFlag: false
+          filters:
+            - RewritePath=/webapi/execTran/(.*),/webapi/obps/execTran/v2/$1
+            - name: ReqBlock
+              args:
+                enable: false
+                expStr: "#ctx.get('data')?.get('dataHead')?.get('cobpsServiceCode') == 'og0503'"
+        - id: tServiceTran
+          uri: http://15.5.92.166:19202
+          order: 8
+          predicates:
+            - Path=/sse/**
+---
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        response-timeout: 100s
+        pool:
+          max-idle-time: 10000
+---
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
+    algorithm: PBEWithMD5AndDES
+spring:
+  datasource:
+    url: jdbc:mysql://15.72.60.2:16310/cobpsdb?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&useSSL=false
+    username: cobps
+    password: ENC(olO66I8VjLwnt0hyuJ8KHFG/Wcc3FDpC)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 30
+      idle-timeout: 600000
+      max-lifetime: 900000
+      connection-timeout: 10000
+      connection-test-query: select 1 from dual
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  typeAliasesPackage: org.jts.entity
+  configuration:
+    logImpl: org.apache.ibatis.logging.log4j2.Log4j2Impl

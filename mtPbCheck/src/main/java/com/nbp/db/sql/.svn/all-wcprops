@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql
+END
+ErrorCodeSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/ErrorCodeSqlConstants.java
+END
+ChnlSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/ChnlSqlConstants.java
+END
+ModuleSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/ModuleSqlConstants.java
+END
+HttpConfSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/HttpConfSqlConstants.java
+END
+GwStatictblSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/GwStatictblSqlConstants.java
+END
+StatictblSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/StatictblSqlConstants.java
+END
+ExtApiSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/ExtApiSqlConstants.java
+END
+ErrorTypeSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/ErrorTypeSqlConstants.java
+END
+SqlTemplateSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/SqlTemplateSqlConstants.java
+END
+GwTestRouteSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/GwTestRouteSqlConstants.java
+END
+GwSysCfgSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/GwSysCfgSqlConstants.java
+END
+GwExceptionSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/GwExceptionSqlConstants.java
+END
+SysCfgSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/SysCfgSqlConstants.java
+END
+AtomSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/AtomSqlConstants.java
+END
+UtilBeanSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/UtilBeanSqlConstants.java
+END
+TranSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/TranSqlConstants.java
+END
+MysqlSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/MysqlSqlConstants.java
+END
+GwRuleSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/GwRuleSqlConstants.java
+END
+ProjectSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/ProjectSqlConstants.java
+END
+RuleSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/RuleSqlConstants.java
+END
+GwTranRouteSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/GwTranRouteSqlConstants.java
+END
+BatchSqlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/db/sql/BatchSqlConstants.java
+END

@@ -1,0 +1,118 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: mtgw
+  cloud:
+    nacos:
+    discovery:
+      server-addr: localhost:8848  # Nacos服务端地址（默认端口8848）
+      namespace: public            # Nacos命名空间（默认public，可根据实际修改）
+      group: DEFAULT_GROUP         # 分组（默认DEFAULT_GROUP）
+      username: nacos              # Nacos登录用户名（如需认证）
+      password: nacos              # Nacos登录密码（如需认证）
+      register-enabled: true       # 是否注册服务
+      ip: ${spring.cloud.client.ip-address}  # 注册IP
+      port: ${server.port}         # 注册端口
+    gateway:
+      locator:
+        enabled: true
+      default-filters:
+        - RemoveRequestHeader=Origin
+      routes:
+        - id: omServiceTranV1
+          #uri: http://127.0.0.1:8083
+          uri: lb://mtapp
+          order: 1
+          predicates:
+            - Path=/webapi/execTran/**
+            #- Weight=service-v1,100
+            #- SvcDispatcher=false
+          filters:
+            #- Auth=Cobps@123
+            # - RewritePath=/webapi/execTran/ex,/webapi/obps/execTran/ex
+            - RewritePath=/webapi/execTran/(.*),/tran/$1  # 重写到App的/tran路径
+            #- RewritePath=/webapi/execTran/(.*),/webapi/obps/execTran/v1/$1
+            #- name: ReqBlock
+            #  args:
+            #    enable: false
+            #    expStr: "#ctx.get('data')?.get('dataHead')?.get('cobpsServiceCode') == 'og0503'"
+        - id: omServiceTranV2
+          uri: http://15.5.92.166:8082
+          order: 8
+          predicates:
+            - Path=/webapi/execTran100/**
+            - Weight=service-v1,0
+            - name: SvcDispatcher
+              args:
+                dbFlag: false
+          filters:
+            - RewritePath=/webapi/execTran100/(.*),/webapi/obps/execTran/v2/$1
+            - name: ReqBlock
+              args:
+                enable: false
+                expStr: "#ctx.get('data')?.get('dataHead')?.get('cobpsServiceCode') == 'og0503'"
+        - id: tServiceTran
+          uri: http://15.5.92.166:19202
+          order: 8
+          predicates:
+            - Path=/sse/**
+        - id: exTran
+          uri: http://1.1.1.1:111
+          order: 8
+          predicates:
+            - Path=/webapi/ex/**
+---
+sentinel:
+  gateway:
+    #流量控制(Flow Rules)
+    flow:
+      rules:
+        #资源标识符，对应路由ID
+        - resourceId: "omServiceTranV11"
+          #QPS阈值，每秒最多允许2个请求
+          count: 2.0
+          #统计时间窗口，这里是1秒
+          intervalSec: 1
+    #降级规则 (Degrade Rules)
+    degrade:
+      rules:
+        - resourceId: "exTran"
+          #异常比例阈值，当异常率达到0.1(10%)时触发降级
+          count: 0.1
+          #降级后的时间窗口，10秒内该资源会被熔断
+          timeWindow: 10
+          #最小请求数，至少有1个请求才会开始统计异常比例
+          minRequestAmount: 1
+---
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        response-timeout: 100s
+        pool:
+          max-idle-time: 10000
+---
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
+    algorithm: PBEWithMD5AndDES
+spring:
+  datasource:
+    url: jdbc:dm://142.1.70.6:5236?schema=YLK_PB
+    username: SYSDBA
+    password: ENC(dH8p+wntumF8TQ+YXGgeJw==)
+    driver-class-name: dm.jdbc.driver.DmDriver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 30
+      idle-timeout: 600000
+      max-lifetime: 900000
+      connection-timeout: 10000
+      connection-test-query: select 1 from dual
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  typeAliasesPackage: org.jts.entity
+  configuration:
+    logImpl: org.apache.ibatis.logging.log4j2.Log4j2Impl

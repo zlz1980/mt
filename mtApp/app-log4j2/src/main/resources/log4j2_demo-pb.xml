@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="ON">
+
+	<Properties>
+		<Property name="TRAN_LOG_PATTERN">%d{HH:mm:ss,SSS}|%-5p|%X{ceb-trace-gid}|%X{UUID}|%t-%T|%c{1.}:%L-%msg|%n</Property>
+		<Property name="PROJECT_LOG_PATH">/jpblog</Property>
+	</Properties>
+
+	<Appenders>
+		<!--控制台日志-->
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="${TRAN_LOG_PATTERN}"/>
+		</Console>
+
+		<Routing name="tranLogAppender">
+			<Routes pattern="${ctx:key}">
+				<Route key="${ctx:key}">
+					<RollingFile name="tranLogAppender-app" fileName="${PROJECT_LOG_PATH}/app.log"
+								 bufferedIO="true" bufferSize="8192" immediateFlush="false" append="true"
+								 filePattern="${PROJECT_LOG_PATH}/bak/app-%d{yyyy-MM-dd-HH}-%i.log.gz">
+						<ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+						<PatternLayout charset="UTF-8" pattern="${TRAN_LOG_PATTERN}"/>
+						<Policies>
+							<TimeBasedTriggeringPolicy interval="24"/>
+							<SizeBasedTriggeringPolicy size="200MB"/>
+						</Policies>
+						<DefaultRolloverStrategy max="100"/>
+					</RollingFile>
+				</Route>
+				<Route>
+					<RollingFile name="tranLogAppender-${ctx:key}"
+								 fileName="${PROJECT_LOG_PATH}/${ctx:logType}/${ctx:chnlNo}/${ctx:tranCode}.log"
+								 bufferedIO="true" bufferSize="8192" immediateFlush="false" append="true"
+								 filePattern="${PROJECT_LOG_PATH}/bak/${ctx:logType}/${ctx:chnlNo}/${ctx:tranCode}api-%d{yyyy-MM-dd-HH}-%i.log.gz">
+						<DynamicThresholdFilter key="POIN-PB-LEVEL" defaultThreshold="INFO" onMatch="ACCEPT"
+												onMismatch="DENY">
+							<KeyValuePair key="TRACE" value="TRACE"/>
+							<KeyValuePair key="DEBUG" value="DEBUG"/>
+							<KeyValuePair key="INFO" value="INFO"/>
+							<KeyValuePair key="ERROR" value="ERROR"/>
+							<KeyValuePair key="OFF" value="OFF"/>
+						</DynamicThresholdFilter>
+						<PatternLayout charset="UTF-8" pattern="${TRAN_LOG_PATTERN}"/>
+						<Policies>
+							<TimeBasedTriggeringPolicy interval="24"/>
+							<SizeBasedTriggeringPolicy size="200MB"/>
+						</Policies>
+						<DefaultRolloverStrategy max="100"/>
+					</RollingFile>
+				</Route>
+			</Routes>
+		</Routing>
+	</Appenders>
+
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="tranLogAppender" />
+		</Root>
+		<!-- <AsyncRoot level="DEBUG" includeLocation="false" additivity="false">
+            <AppenderRef ref="tranLogAppender"/>
+        </AsyncRoot> -->
+		<!-- 配置同步输出到控制台
+        <Root level="info">
+            <AppenderRef ref="CONSOLE" />
+        </Root>-->
+	</Loggers>
+</Configuration>

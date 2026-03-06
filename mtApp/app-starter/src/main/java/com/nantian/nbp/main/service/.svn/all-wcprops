@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/service
+END
+IReloadCacheService.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/service/IReloadCacheService.java
+END
+VersionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/service/VersionService.java
+END
+ITranReplayInfoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/service/ITranReplayInfoService.java
+END

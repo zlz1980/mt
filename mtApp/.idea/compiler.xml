@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="app-cache" />
+        <module name="cache-api" />
+        <module name="flow-engine" />
+        <module name="rule-cache" />
+        <module name="app-persistence" />
+        <module name="flow-extend" />
+        <module name="app-entity" />
+        <module name="app-main" />
+        <module name="app-log4j2" />
+        <module name="app-utils" />
+        <module name="app-starter" />
+        <module name="my-atom" />
+        <module name="rule-engine" />
+        <module name="flow-api" />
+        <module name="base-atom" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

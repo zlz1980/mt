@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/rule-engine/src/main/java/com/nantian/nbp/rule/entity
+END
+RuleGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/rule-engine/src/main/java/com/nantian/nbp/rule/entity/RuleGroup.java
+END
+Rule.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/rule-engine/src/main/java/com/nantian/nbp/rule/entity/Rule.java
+END
+RuleConditionKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/rule-engine/src/main/java/com/nantian/nbp/rule/entity/RuleConditionKey.java
+END
+RuleGroupKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/rule-engine/src/main/java/com/nantian/nbp/rule/entity/RuleGroupKey.java
+END
+RuleBizType.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/rule-engine/src/main/java/com/nantian/nbp/rule/entity/RuleBizType.java
+END
+RuleCondition.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/rule-engine/src/main/java/com/nantian/nbp/rule/entity/RuleCondition.java
+END

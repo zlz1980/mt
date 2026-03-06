@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/COBPS_NEW/!svn/ver/71741/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config
+END
+PbRestTemplateConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/PbRestTemplateConfig.java
+END
+FlowEngineConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/COBPS_NEW/!svn/ver/71710/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/FlowEngineConfig.java
+END
+PbLocalCacheConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/PbLocalCacheConfig.java
+END
+SqlSessionConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/SqlSessionConfig.java
+END
+DataSourceTransitionConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/DataSourceTransitionConfig.java
+END
+WebAdminConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/COBPS_NEW/!svn/ver/71741/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/WebAdminConfig.java
+END
+CorsConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/CorsConfig.java
+END
+SagaTransitionConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/SagaTransitionConfig.java
+END
+RuleConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-starter/src/main/java/com/nantian/nbp/main/config/RuleConfig.java
+END

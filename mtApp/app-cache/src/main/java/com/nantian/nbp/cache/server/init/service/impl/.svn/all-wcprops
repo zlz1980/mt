@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/COBPS_NEW/!svn/ver/71699/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl
+END
+DecisionResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/DecisionResourceCacheLoader.java
+END
+InitFlowContainerTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/InitFlowContainerTask.java
+END
+SysCfgResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/SysCfgResourceCacheLoader.java
+END
+TranCodeResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/TranCodeResourceCacheLoader.java
+END
+HttpConfResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/COBPS_NEW/!svn/ver/71699/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/HttpConfResourceCacheLoader.java
+END
+TranCodeConvResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/TranCodeConvResourceCacheLoader.java
+END
+UtilsBeanResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/UtilsBeanResourceCacheLoader.java
+END
+ApiResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/ApiResourceCacheLoader.java
+END
+FbspFlowExtendServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/FbspFlowExtendServiceImpl.java
+END
+FlowContainerResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/FlowContainerResourceCacheLoader.java
+END
+CacheTableResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/CacheTableResourceCacheLoader.java
+END
+SqlTemplateResourceCacheLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-cache/src/main/java/com/nantian/nbp/cache/server/init/service/impl/SqlTemplateResourceCacheLoader.java
+END

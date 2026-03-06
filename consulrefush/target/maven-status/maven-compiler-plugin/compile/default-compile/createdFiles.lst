@@ -1,0 +1,5 @@
+com\nbp\env\EnvVar.class
+com\nbp\app\ConsulInfoFetcher.class
+com\nbp\vo\RefreshResult.class
+com\nbp\vo\ConsulInfoFetcherVo.class
+com\nbp\util\ConsulInfoFetcherUtils.class

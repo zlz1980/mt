@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/COBPS_NEW/!svn/ver/71513/Src/NewPb/mtGw/src/main/java/org/jts/server/tcp/codec
+END
+CustomDecoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COBPS_NEW/!svn/ver/71513/Src/NewPb/mtGw/src/main/java/org/jts/server/tcp/codec/CustomDecoder.java
+END
+CustomEncoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/COBPS_NEW/!svn/ver/71513/Src/NewPb/mtGw/src/main/java/org/jts/server/tcp/codec/CustomEncoder.java
+END

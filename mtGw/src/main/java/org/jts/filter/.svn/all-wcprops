@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/COBPS_NEW/!svn/ver/71726/Src/NewPb/mtGw/src/main/java/org/jts/filter
+END
+AuthGatewayFilterFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/COBPS_NEW/!svn/ver/71519/Src/NewPb/mtGw/src/main/java/org/jts/filter/AuthGatewayFilterFactory.java
+END
+ReqBlockGatewayFilterFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/COBPS_NEW/!svn/ver/71726/Src/NewPb/mtGw/src/main/java/org/jts/filter/ReqBlockGatewayFilterFactory.java
+END

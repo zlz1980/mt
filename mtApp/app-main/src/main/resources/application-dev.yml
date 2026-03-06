@@ -1,0 +1,47 @@
+server:
+  port: 18083
+  undertow:
+    # IO线程数，执行非阻塞任务，默认值每个CPU核心一个线程
+    io-threads: 8
+    # 工作线程数，执行请求阻塞请求，取值为系统负载
+    worker-threads: 16
+    # 缓冲区大小，空间值越小利用越充分
+    buffer-size: 8192
+spring:
+  application:
+    name: mtapp
+
+---
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
+    algorithm: PBEWithMD5AndDES
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848  # Nacos服务端地址（默认端口8848）
+        namespace: public            # Nacos命名空间（默认public，可根据实际修改）
+        group: DEFAULT_GROUP         # 分组（默认DEFAULT_GROUP）
+        username: nacos              # Nacos登录用户名（如需认证）
+        password: nacos              # Nacos登录密码（如需认证）
+        register-enabled: true       # 是否注册服务
+        ip: ${spring.cloud.client.ip-address}  # 注册IP
+        port: ${server.port}         # 注册端口
+  datasource:
+    url: jdbc:dm://142.1.70.6:5236?schema=YLKPB
+    username: YLKPB
+    password: ENC(HnuEJFuFTX4nJnKMTBAydZKxpFVqM2j7)
+    driver-class-name: dm.jdbc.driver.DmDriver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 30
+      idle-timeout: 600000
+      max-lifetime: 900000
+      connection-timeout: 10000
+      connection-test-query: select 1 from dual
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    logImpl: org.apache.ibatis.logging.log4j2.Log4j2Impl

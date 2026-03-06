@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/COBPS_NEW/!svn/ver/71747/Src/NewPb/mtApp/app-entity/src/main/java/com/nantian/nbp/flow/engine/service/api
+END
+AtomService.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-entity/src/main/java/com/nantian/nbp/flow/engine/service/api/AtomService.java
+END
+HttpSvcClientTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/COBPS_NEW/!svn/ver/71712/Src/NewPb/mtApp/app-entity/src/main/java/com/nantian/nbp/flow/engine/service/api/HttpSvcClientTemplate.java
+END
+FeConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-entity/src/main/java/com/nantian/nbp/flow/engine/service/api/FeConstants.java
+END
+TranContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-entity/src/main/java/com/nantian/nbp/flow/engine/service/api/TranContext.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/COBPS_NEW/!svn/ver/71747/Src/NewPb/mtApp/app-entity/src/main/java/com/nantian/nbp/flow/engine/service/api/Constants.java
+END
+ScopeValUnit.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/COBPS_NEW/!svn/ver/71511/Src/NewPb/mtApp/app-entity/src/main/java/com/nantian/nbp/flow/engine/service/api/ScopeValUnit.java
+END

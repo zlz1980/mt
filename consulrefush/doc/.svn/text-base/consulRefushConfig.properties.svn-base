@@ -1,0 +1,9 @@
+GW=EBAC-SUBNOA-MS-CupsGateway,EBAC-SUBNOA-MS-EmvoGateway,EBAC-SUBNOA-MS-Gateway
+APP=EBAC-SUBNOA-MS-CFinService,EBAC-SUBNOA-MS-CNonFinService,EBAC-SUBNOA-MS-DFinService,EBAC-SUBNOA-MS-DNonFinService,EBAC-SUBNOA-MS-Acceptance,EBAC-SUBNOA-MS-Verification,EBAC-SUBNOA-MS-ManageService
+BAT=EBAC-SUBNOA-MS-BatchExecuteService
+AZ1=edsp-msc-xcw1
+AZ2=edsp-msc-xcw2
+AZ3=edsp-msc-xcw3
+ACLTOKEN=c9332e7f-0961-97e6-6740-5b36d0357be2
+IP=16.73.255.11
+PORT=8500

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/COBPS_NEW/!svn/ver/71518/Src/NewPb/mtGw/src/main/resources
+END
+application-dev.yml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/COBPS_NEW/!svn/ver/71513/Src/NewPb/mtGw/src/main/resources/application-dev.yml
+END
+log4j2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/COBPS_NEW/!svn/ver/71513/Src/NewPb/mtGw/src/main/resources/log4j2.xml
+END
+application.yml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/COBPS_NEW/!svn/ver/71513/Src/NewPb/mtGw/src/main/resources/application.yml
+END
+log4j2.component.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/COBPS_NEW/!svn/ver/71518/Src/NewPb/mtGw/src/main/resources/log4j2.component.properties
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw
+END
+CheckOutGwException.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwException.java
+END
+CheckOutGwSysCfg.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwSysCfg.java
+END
+CheckOutGwTestRoute.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwTestRoute.java
+END
+CheckOutGwByProject.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwByProject.java
+END
+CheckOutGwTranRoute.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwTranRoute.java
+END
+CheckOutGwRuleGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwRuleGroup.java
+END
+CheckOutGwAll.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwAll.java
+END
+CheckOutGwStatictbl.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/COBPS_NEW/!svn/ver/71731/Src/NewPb/mtPbCheck/src/main/java/com/nbp/check/checkout/impl/gw/CheckOutGwStatictbl.java
+END

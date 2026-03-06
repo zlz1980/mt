@@ -1,0 +1,36 @@
+server:
+  port: 8083
+  undertow:
+    # IO线程数，执行非阻塞任务，默认值每个CPU核心一个线程
+    io-threads: 8
+    # 工作线程数，执行请求阻塞请求，取值为系统负载
+    worker-threads: 16
+    # 缓冲区大小，空间值越小利用越充分
+    buffer-size: 8192
+spring:
+  application:
+    name: mtapp
+
+---
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
+    algorithm: PBEWithMD5AndDES
+spring:
+  datasource:
+    url: jdbc:mysql://15.72.60.2:16310/cobpsty?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&useSSL=false
+    username: cobps
+    password: ENC(t8AihAoPZ7brpq9gbrk6XVCggbBHJXFl) #dlk@Ceb#123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 30
+      idle-timeout: 600000
+      max-lifetime: 900000
+      connection-timeout: 10000
+      connection-test-query: select 1 from dual
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    logImpl: org.apache.ibatis.logging.log4j2.Log4j2Impl
